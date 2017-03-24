@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>bing search</title>
+    <!--浏览器的兼容视图，浏览器的文档模式是最新版本的ie-->
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background-color: #333;
+        }
+        .bg-div{
+            background-image: url(img/river.jpg);
+            width: 1228px;
+            height: 690px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .logo{
+            background-image: url(img/logo.png);
+            width: 107px;
+            height: 53px;
+            float: left;
+            margin: -4px 18px 0 0;
+        }
+        .search-box{
+            position: absolute;
+            top: 200px;
+            left: 300px;
+        }
+        form{
+            float: left;
+            background-color: #fff;
+            padding: 5px;
+        }
+        .search-input-text{
+            border: 0;
+            float: left;
+            height: 25px;
+            line-height: 25px;
+            outline: none;
+            width: 350px;
+            font-size: 20px;
+        }
+        .search-input-button{
+            border: 0;
+            background-image: url(img/search-button.png);
+            width: 29px;
+            height: 29px;
+            float: left;
+            outline: none;
+            cursor: pointer;
+        }
+        .suggest{
+            width: 388px;
+            background-color: #fff;
+            border: 1px solid #999;
+
+        }
+        .suggest ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .suggest ul li{
+            padding: 3px;
+            font-size: 14px;
+            line-height: 25px;
+            cursor: pointer;
+        }
+        .suggest ul li:hover{
+            text-decoration: underline;
+            background-color: #e5e5e5;
+        }
+    </style>
+</head>
+<body>
+<div class="bg-div">
+    <div class="search-box">
+        <div class="logo"></div>
+        <form action="" id="search-form">
+            <input type="text" id="searchInput" class="search-input-text">
+            <input type="submit" class="search-input-button" value="">
+        </form>
+    </div>
+</div>
+
+<!--这层div是作定位使用-->
+<div class="suggest" id="search-suggest" style="display: none">
+<ul id="searchResult">
+    <li>搜索结果1</li>
+    <li>搜索结果2</li>
+    <li>搜索结果3</li>
+</ul>
+</div>
+
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/bing.js"></script>
+</body>
+</html>
